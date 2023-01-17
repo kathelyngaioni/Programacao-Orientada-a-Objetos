@@ -1,33 +1,10 @@
-//Por padrão no JS utilizamos o "_" para indicar que um atributo é privado e não deveria ser alterado.Apesar de ainda ser possível alterar essa propriedade isso é considerado uma má prática e estamos quebrando o encapsulamento da classe.
-
-class Cliente {
-  nome;
-  CPF;
-}
-
+import {Cliente} from "./Cliente.js"
+import {contaCorrente} from "./ContaCorrente.js"
 
 const cliente1 = new Cliente();
 cliente1.nome = "Claudio";
 cliente1.cpf = 11122233301;
 
-class contaCorrente {
-  agencia;
-  _saldo = 0;
-
-  sacar(valor){
-    if(this._saldo >= valor){
-      this._saldo -= valor;
-      return this._saldo;
-    }
-  }
-  depositar(valor){
-    if(valor <= 0){
-      //retornar sem valor nenhum
-      return; 
-    }
-     this._saldo += valor;  
-  }
-}
 
 const contaCorrenteRicardo = new contaCorrente();
 
