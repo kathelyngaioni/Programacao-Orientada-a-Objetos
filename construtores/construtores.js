@@ -7,3 +7,5 @@ console.log(cliente1.CPF);
 
 const conta1 = new contaCorrente(101,cliente1);
 console.log(conta1)
+
+console.log(contaCorrente.numeroDeContas);
